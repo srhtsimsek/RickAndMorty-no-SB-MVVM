@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC4946662A767495002172DE /* RickAndMortyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4946652A767495002172DE /* RickAndMortyViewModel.swift */; };
+		EC57D8A42A77E0C500C9DB93 /* RickAndMortyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57D8A32A77E0C500C9DB93 /* RickAndMortyTableViewCell.swift */; };
 		EC64FAF42A762B890093DFCA /* RickAndMortyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC64FAF32A762B890093DFCA /* RickAndMortyViewController.swift */; };
 		EC64FAF72A762BEB0093DFCA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC64FAF62A762BEB0093DFCA /* SnapKit */; };
 		EC64FAF92A762BEB0093DFCA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = EC64FAF82A762BEB0093DFCA /* SnapKit-Dynamic */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		EC4946652A767495002172DE /* RickAndMortyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RickAndMortyViewModel.swift; sourceTree = "<group>"; };
+		EC57D8A32A77E0C500C9DB93 /* RickAndMortyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RickAndMortyTableViewCell.swift; sourceTree = "<group>"; };
 		EC64FAF32A762B890093DFCA /* RickAndMortyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RickAndMortyViewController.swift; sourceTree = "<group>"; };
 		EC64FAFA2A76456F0093DFCA /* RickAndMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyService.swift; sourceTree = "<group>"; };
 		EC74F9452A76459B00D346CB /* RickAndMortyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RickAndMortyModel.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ECCCD9942A77E03500644048 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EC57D8A32A77E0C500C9DB93 /* RickAndMortyTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		ECF9C48B2A762A4B0003A281 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		ECF9C4AE2A762AE70003A281 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ECCCD9942A77E03500644048 /* TableViewCell */,
 				EC64FAF32A762B890093DFCA /* RickAndMortyViewController.swift */,
 			);
 			path = View;
@@ -229,6 +240,7 @@
 				EC64FAFB2A76456F0093DFCA /* RickAndMortyService.swift in Sources */,
 				ECF9C49C2A762A4B0003A281 /* ViewController.swift in Sources */,
 				EC4946662A767495002172DE /* RickAndMortyViewModel.swift in Sources */,
+				EC57D8A42A77E0C500C9DB93 /* RickAndMortyTableViewCell.swift in Sources */,
 				ECF9C4982A762A4B0003A281 /* AppDelegate.swift in Sources */,
 				EC64FAF42A762B890093DFCA /* RickAndMortyViewController.swift in Sources */,
 				ECF9C49A2A762A4B0003A281 /* SceneDelegate.swift in Sources */,

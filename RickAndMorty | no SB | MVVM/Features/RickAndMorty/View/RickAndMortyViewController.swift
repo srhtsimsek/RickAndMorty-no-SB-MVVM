@@ -41,13 +41,15 @@ final class RickAndMortyViewController: UIViewController {
     func drawDesign(){
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(RickAndMortyTableViewCell.self, forCellReuseIdentifier: RickAndMortyTableViewCell.Identifier.custom.rawValue)
+        tableView.rowHeight = 200
         
         DispatchQueue.main.async {
             self.view.backgroundColor = .white
             self.labelTitle.textColor = .systemGreen
             self.labelTitle.font = .systemFont(ofSize: 30, weight: .semibold)
             self.labelTitle.text = "Rick And Morty"
-            self.tableView.backgroundColor = .purple
+            self.tableView.backgroundColor = .white
             self.activityIndicator.color = .systemPink
         }
         
@@ -76,8 +78,11 @@ extension RickAndMortyViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = results[indexPath.row].name ?? ""
+        guard let cell: RickAndMortyTableViewCell = tableView.dequeueReusableCell(withIdentifier: RickAndMortyTableViewCell.Identifier.custom.rawValue, for: indexPath) as? RickAndMortyTableViewCell else {
+            return UITableViewCell()
+            
+        }
+        cell.saveModel(model: results[indexPath.row])
         return cell
     }
     
@@ -90,8 +95,8 @@ extension RickAndMortyViewController {
         view.addSubview(labelTitle)
         
         labelTitle.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
-            make.left.equalToSuperview().offset(18)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(5)
+            make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview()
             make.height.greaterThanOrEqualTo(30)
         }
