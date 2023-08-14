@@ -84,7 +84,6 @@
 			children = (
 				ECF9C4AC2A762A630003A281 /* Features */,
 				ECF9C4AB2A762A5D0003A281 /* Core */,
-				ECF9C4A22A762A4E0003A281 /* LaunchScreen.storyboard */,
 				ECF9C4A52A762A4E0003A281 /* Info.plist */,
 			);
 			path = "RickAndMorty | no SB | MVVM";
@@ -98,6 +97,7 @@
 				ECF9C49B2A762A4B0003A281 /* ViewController.swift */,
 				ECF9C49D2A762A4B0003A281 /* Main.storyboard */,
 				ECF9C4A02A762A4E0003A281 /* Assets.xcassets */,
+				ECF9C4A22A762A4E0003A281 /* LaunchScreen.storyboard */,
 			);
 			path = Core;
 			sourceTree = "<group>";

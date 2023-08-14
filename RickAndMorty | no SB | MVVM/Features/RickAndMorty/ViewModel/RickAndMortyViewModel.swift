@@ -8,15 +8,13 @@
 import Foundation
         
 protocol IRickAndMortyViewModel {
-    func fetchItems()
-    func changeLoading()
-    
     var rickAndMortyCharacters: [Result] { get set }
     var rickAndMortyService: IRickAndMortyService { get }
-    
     var rickAndMortyOutput: RickAndMortyOutput? { get }
     
     func setDelegate(output: RickAndMortyOutput)
+    func fetchItems()
+    func changeLoading()
 }
 
 final class RickAndMortyViewModel: IRickAndMortyViewModel {
@@ -40,12 +38,10 @@ final class RickAndMortyViewModel: IRickAndMortyViewModel {
             self?.rickAndMortyOutput?.saveDatas(values: self?.rickAndMortyCharacters ?? [])
             self?.changeLoading()
         }
-        
     }
     
     func changeLoading() {
         isLoading = !isLoading
         rickAndMortyOutput?.changeLoading(isLoad: isLoading)
     }
-    
 }

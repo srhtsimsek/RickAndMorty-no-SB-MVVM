@@ -29,12 +29,11 @@ final class RickAndMortyViewController: UIViewController {
         viewModel.setDelegate(output: self)
         viewModel.fetchItems()
     }
-
+    
     func configure(){
         makeLabelTitle()
         makeActivityIndicator()
         makeTableView()
-        
         drawDesign()
     }
     
@@ -52,11 +51,8 @@ final class RickAndMortyViewController: UIViewController {
             self.tableView.backgroundColor = .white
             self.activityIndicator.color = .systemPink
         }
-        
         self.activityIndicator.startAnimating()
     }
-    
-    
 }
 
 extension RickAndMortyViewController: RickAndMortyOutput {
@@ -68,8 +64,6 @@ extension RickAndMortyViewController: RickAndMortyOutput {
         results = values
         tableView.reloadData()
     }
-    
-    
 }
 
 extension RickAndMortyViewController: UITableViewDelegate, UITableViewDataSource {
@@ -80,13 +74,10 @@ extension RickAndMortyViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: RickAndMortyTableViewCell = tableView.dequeueReusableCell(withIdentifier: RickAndMortyTableViewCell.Identifier.custom.rawValue, for: indexPath) as? RickAndMortyTableViewCell else {
             return UITableViewCell()
-            
         }
         cell.saveModel(model: results[indexPath.row])
         return cell
     }
-    
-    
 }
 
 extension RickAndMortyViewController {
@@ -122,6 +113,4 @@ extension RickAndMortyViewController {
             make.right.equalTo(labelTitle.snp.right).offset(-12)
         }
     }
-
-    
 }

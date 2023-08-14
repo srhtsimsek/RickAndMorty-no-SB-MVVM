@@ -43,7 +43,6 @@ final class RickAndMortyTableViewCell: UITableViewCell {
             make.top.equalTo(contentView)
             make.left.equalToSuperview()
             make.right.equalToSuperview()
-            
         }
     }
     
@@ -54,7 +53,6 @@ final class RickAndMortyTableViewCell: UITableViewCell {
         titleOfCell.snp.makeConstraints { make in
             make.top.equalTo(customImageViewOfCell.snp.bottom).offset(5)
             make.right.left.equalTo(contentView).offset(3)
-            
         }
     }
     
@@ -66,7 +64,6 @@ final class RickAndMortyTableViewCell: UITableViewCell {
             make.top.equalTo(titleOfCell).offset(10)
             make.right.left.equalTo(titleOfCell).offset(3)
             make.bottom.equalToSuperview()
-            
         }
     }
     
@@ -75,6 +72,4 @@ final class RickAndMortyTableViewCell: UITableViewCell {
         descriptionOfTitle.text = model.status
         customImageViewOfCell.af.setImage(withURL: (URL(string: model.image ?? randomImage) ?? URL(string: randomImage))!)
     }
-    
-    
 }

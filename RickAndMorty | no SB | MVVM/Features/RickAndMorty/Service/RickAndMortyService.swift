@@ -20,9 +20,7 @@ protocol IRickAndMortyService {
     func fetchAllData(response:@escaping ([Result]?) -> Void)
 }
 
-struct RickyAndMortyService {
-    
-}
+struct RickyAndMortyService {}
 
 extension RickyAndMortyService: IRickAndMortyService {
     func fetchAllData(response:@escaping ([Result]?) -> Void) {
@@ -31,11 +29,7 @@ extension RickyAndMortyService: IRickAndMortyService {
                 response(nil)
                 return
             }
-            
             response(data.results)
-            
         }
     }
-    
-    
 }
